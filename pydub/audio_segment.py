@@ -844,7 +844,7 @@ class AudioSegment(object):
             -a:b).
 
         parameters (list of strings)
-            Aditional ffmpeg/avconv parameters
+            Additional ffmpeg/avconv parameters
 
         tags (dict)
             Set metadata information to destination files
