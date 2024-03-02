@@ -491,7 +491,7 @@ Splits a stereo `AudioSegment` into two, one for each channel (Left/Right). Retu
 from pydub import AudioSegment
 sound1 = AudioSegment.from_file("sound1.wav")
 
-# make left channel 6dB quieter and right channe 2dB louder
+# make left channel 6dB quieter and right channel 2dB louder
 stereo_balance_adjusted = sound1.apply_gain_stereo(-6, +2)
 ```
 Apply gain to the left and right channel of a stereo `AudioSegment`. If the `AudioSegment` is mono, it will be converted to stereo before applying the gain.
