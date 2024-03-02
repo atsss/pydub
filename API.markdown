@@ -318,7 +318,7 @@ raw_audio_data = sound.raw_data
 
 ### AudioSegment(…).frame_count()
 
-Returns the number of frames in the `AudioSegment`. Optionally you may pass in a `ms` keywork argument to retrieve the number of frames in that number of milliseconds of audio in the `AudioSegment` (useful for slicing, etc).
+Returns the number of frames in the `AudioSegment`. Optionally you may pass in a `ms` keyword argument to retrieve the number of frames in that number of milliseconds of audio in the `AudioSegment` (useful for slicing, etc).
 
 ```python
 from pydub import AudioSegment
