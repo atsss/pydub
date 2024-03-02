@@ -1199,7 +1199,7 @@ class AudioSegment(object):
         """
 
         if loop:
-            # match loop=True's behavior with new times (count) mechinism.
+            # match loop=True's behavior with new times (count) mechanism.
             times = -1
         elif times is None:
             # no times specified, just once through
