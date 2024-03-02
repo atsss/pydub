@@ -2,7 +2,7 @@
 - Fix crashing bug in new scipy-powered EQ effects
 
 # v0.25.0
-- Don't show a runtime warning about the optional ffplay dependency being missing until someone trys to use it
+- Don't show a runtime warning about the optional ffplay dependency being missing until someone tries to use it
 - Documentation improvements
 - Python 3.9 support
 - Improved efficiency of loading wave files with `pydub.AudioSegment.from_file()`
