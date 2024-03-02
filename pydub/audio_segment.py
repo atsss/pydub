@@ -1175,7 +1175,7 @@ class AudioSegment(object):
     def overlay(self, seg, position=0, loop=False, times=None, gain_during_overlay=None):
         """
         Overlay the provided segment on to this segment starting at the
-        specificed position and using the specfied looping beahvior.
+        specified position and using the specfied looping beahvior.
 
         seg (AudioSegment):
             The audio segment to overlay on to this one.
