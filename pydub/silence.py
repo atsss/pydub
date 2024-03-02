@@ -25,7 +25,7 @@ def detect_silence(audio_segment, min_silence_len=1000, silence_thresh=-16, seek
     # convert silence threshold to a float value (so we can compare it to rms)
     silence_thresh = db_to_float(silence_thresh) * audio_segment.max_possible_amplitude
 
-    # find silence and add start and end indicies to the to_cut list
+    # find silence and add start and end indices to the to_cut list
     silence_starts = []
 
     # check successive (1 sec by default) chunk of sound for silence
