@@ -374,7 +374,7 @@ from pydub import AudioSegment
 sound1 = AudioSegment.from_file("sound1.wav")
 sound2 = AudioSegment.from_file("sound2.wav")
 
-played_togther = sound1.overlay(sound2)
+played_together = sound1.overlay(sound2)
 
 sound2_starts_after_delay = sound1.overlay(sound2, position=5000)
 
