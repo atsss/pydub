@@ -154,7 +154,7 @@ class AudioSegment(object):
     AudioSegments are *immutable* objects representing segments of audio
     that can be manipulated using python code.
 
-    AudioSegments are slicable using milliseconds.
+    AudioSegments are sliceable using milliseconds.
     for example:
         a = AudioSegment.from_mp3(mp3file)
         first_second = a[:1000] # get the first second of an mp3
