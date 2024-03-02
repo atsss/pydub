@@ -479,7 +479,7 @@ Creates an equivalent version of this `AudioSegment` with the specified frame ra
 
 ### AudioSegment(…).set_channels()
 
-Creates an equivalent version of this `AudioSegment` with the specified number of channels (1 is Mono, 2 is Stereo). Converting from mono to stereo does not cause any audible change. Converting from stereo to mono may result in loss of quality (but only if the left and right chanels differ).
+Creates an equivalent version of this `AudioSegment` with the specified number of channels (1 is Mono, 2 is Stereo). Converting from mono to stereo does not cause any audible change. Converting from stereo to mono may result in loss of quality (but only if the left and right channels differ).
 
 ### AudioSegment(…).split_to_mono()
 
