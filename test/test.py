@@ -102,7 +102,7 @@ if sys.version_info >= (3, 6):
             self.assertEqual(seg1._data, seg2._data)
             self.assertTrue(len(seg1) > 0)
 
-        def test_non_existant_pathlib_path(self):
+        def test_non_existent_pathlib_path(self):
             from pathlib import Path
             path = Path('this/path/should/not/exist/do/not/make/this/exist')
             with self.assertRaises(FileNotFoundError):
