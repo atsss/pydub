@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update --fix-missing
-        sudo apt-get install -y ffmpeg libopus-dev python3-scipy
+        sudo apt-get install -y ffmpeg python3-scipy
     - name: Test with unittest
       run: |
         python test/test.py
