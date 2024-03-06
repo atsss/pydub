@@ -1,14 +1,14 @@
 FROM python:3.11-slim AS base
 RUN apt-get update -qq --fix-missing \
-    && apt-get install -y --no-install-recommends  ffmpeg \
+    && apt-get install -y --no-install-recommends ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 FROM base AS build
-COPY requirements.txt .
+COPY requirements/ ./requirements/
 
 RUN pip install --upgrade pip
 # install dependencies to the local user directory (eg. /root/.local)
-RUN pip install --user -r requirements.txt
+RUN pip install --user -r requirements/dev.txt
 
 FROM base
 
