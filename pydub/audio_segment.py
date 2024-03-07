@@ -14,14 +14,14 @@ from collections import namedtuple
 
 try:
     from StringIO import StringIO
-except:
+except: # noqa: E722
     from io import StringIO
 
 from io import BytesIO
 
 try:
     from itertools import izip
-except:
+except: # noqa: E722
     izip = zip
 
 from .utils import (
@@ -190,7 +190,7 @@ class AudioSegment(object):
         if isinstance(data, array.array):
             try:
                 data = data.tobytes()
-            except:
+            except: # noqa: E722
                 data = data.tostring()
 
         # prevent partial specification of arguments
@@ -293,7 +293,7 @@ class AudioSegment(object):
     def __eq__(self, other):
         try:
             return self._data == other._data
-        except:
+        except: # noqa: E722
             return False
 
     def __hash__(self):
@@ -422,7 +422,7 @@ class AudioSegment(object):
         if isinstance(data, array.array):
             try:
                 data = data.tobytes()
-            except:
+            except: # noqa: E722
                 data = data.tostring()
 
         # accept file-like objects
@@ -565,7 +565,7 @@ class AudioSegment(object):
                     return obj[: duration * 1000]
                 else:
                     return obj[start_second * 1000 : (start_second + duration) * 1000]
-            except:
+            except: # noqa: E722
                 file.seek(0)
         elif is_format("raw") or is_format("pcm"):
             sample_width = kwargs["sample_width"]
@@ -727,7 +727,7 @@ class AudioSegment(object):
                     return cls._from_safe_wav(file)[
                         start_second * 1000 : (start_second + duration) * 1000
                     ]
-            except:
+            except: # noqa: E722
                 file.seek(0)
         elif is_format("raw") or is_format("pcm"):
             sample_width = kwargs["sample_width"]
