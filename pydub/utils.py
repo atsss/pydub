@@ -14,7 +14,7 @@ from functools import wraps
 try:
     import audioop
 except ImportError:
-    import pyaudioop as audioop
+    pass
 
 if sys.version_info >= (3, 0):
     basestring = str

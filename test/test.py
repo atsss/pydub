@@ -15,7 +15,6 @@ from pydub.utils import (
     mediainfo,
     get_encoder_name,
     get_supported_decoders,
-    get_supported_encoders,
 )
 from pydub.exceptions import (
     InvalidTag,

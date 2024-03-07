@@ -10,7 +10,7 @@ from .utils import (
     get_min_max_value,
 )
 from .silence import split_on_silence
-from .exceptions import TooManyMissingFrames, InvalidDuration
+from .exceptions import InvalidDuration
 
 if sys.version_info >= (3, 0):
     xrange = range

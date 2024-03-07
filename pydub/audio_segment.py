@@ -1521,4 +1521,3 @@ class AudioSegment(object):
         return src.format(base64=data)
 
 
-from . import effects
