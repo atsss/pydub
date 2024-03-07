@@ -193,7 +193,7 @@ class AudioSegmentTests(unittest.TestCase):
     def setUp(self):
         global test1, test2, test3, testparty, testdcoffset
         if not test1:
-            a = os.path.join(data_dir, "test1.mp3") # noqa: F841
+            a = os.path.join(data_dir, "test1.mp3")  # noqa: F841
             test1 = AudioSegment.from_mp3(os.path.join(data_dir, "test1.mp3"))
             test2 = AudioSegment.from_mp3(os.path.join(data_dir, "test2.mp3"))
             test3 = AudioSegment.from_mp3(os.path.join(data_dir, "test3.mp3"))
@@ -332,7 +332,7 @@ class AudioSegmentTests(unittest.TestCase):
             yield self.seg3
 
         try:
-            summed = sum(gen()) # noqa: F841
+            summed = sum(gen())  # noqa: F841
         except TypeError as e:
             if "unsupported operand" in str(e):
                 self.fail("Could not sum() audio segments.")
@@ -559,7 +559,7 @@ class AudioSegmentTests(unittest.TestCase):
             panned = seg.apply_gain_stereo(left_dbfs_change, right_dbfs_change)
             self.assertEqual(panned.channels, 2)
 
-            l, r = panned.split_to_mono() # noqa: E741
+            l, r = panned.split_to_mono()  # noqa: E741
             assertAlmostEqual(l.dBFS, orig_dbfs_l + left_dbfs_change, places=2)
             assertAlmostEqual(r.dBFS, orig_dbfs_r + right_dbfs_change, places=2)
 
@@ -589,7 +589,7 @@ class AudioSegmentTests(unittest.TestCase):
         def check_pan(pan, left_dbfs_change, right_dbfs_change):
             panned = seg.pan(pan)
 
-            l, r = panned.split_to_mono() # noqa: E741
+            l, r = panned.split_to_mono()  # noqa: E741
             assertAlmostEqual(l.dBFS, orig_dbfs_l + left_dbfs_change, places=1)
             assertAlmostEqual(r.dBFS, orig_dbfs_r + right_dbfs_change, places=1)
 

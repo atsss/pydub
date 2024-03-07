@@ -41,7 +41,7 @@ class SignalGenerator(object):
 
         try:
             data = data.tobytes()
-        except: # noqa: E722
+        except:  # noqa: E722
             data = data.tostring()
 
         return AudioSegment(

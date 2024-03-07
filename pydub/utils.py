@@ -12,7 +12,7 @@ from warnings import warn
 from functools import wraps
 
 try:
-    import audioop # noqa: F401
+    import audioop  # noqa: F401
 except ImportError:
     pass
 
@@ -383,7 +383,7 @@ def cache_codecs(function):
     def wrapper():
         try:
             return cache[0]
-        except: # noqa: E722
+        except:  # noqa: E722
             cache[0] = function()
             return cache[0]
 
@@ -437,7 +437,7 @@ def stereo_to_ms(audio_segment):
         channel[0].overlay(channel[1]),
         channel[0].overlay(channel[1].invert_phase()),
     ]
-    return AudioSegment.from_mono_audiosegments(channel[0], channel[1]) # noqa: F821
+    return AudioSegment.from_mono_audiosegments(channel[0], channel[1])  # noqa: F821
 
 
 def ms_to_stereo(audio_segment):
@@ -449,4 +449,4 @@ def ms_to_stereo(audio_segment):
         channel[0].overlay(channel[1]) - 3,
         channel[0].overlay(channel[1].invert_phase()) - 3,
     ]
-    return AudioSegment.from_mono_audiosegments(channel[0], channel[1]) # noqa: F821
+    return AudioSegment.from_mono_audiosegments(channel[0], channel[1])  # noqa: F821
