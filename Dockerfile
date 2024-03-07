@@ -1,10 +1,10 @@
 FROM python:3.11-slim AS base
 RUN apt-get update -qq --fix-missing \
-    && apt-get install -y --no-install-recommends ffmpeg \
+    && apt-get install -y --no-install-recommends ffmpeg python3-scipy \
     && rm -rf /var/lib/apt/lists/*
 
 FROM base AS build
-COPY requirements/ ./requirements/
+COPY requirements/dev.txt ./requirements/
 
 RUN pip install --upgrade pip
 # install dependencies to the local user directory (eg. /root/.local)
