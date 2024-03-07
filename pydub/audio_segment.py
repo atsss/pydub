@@ -527,7 +527,7 @@ class AudioSegment(object):
         parameters=None,
         start_second=None,
         duration=None,
-        **kwargs
+        **kwargs,
     ):
         orig_file = file
         file, close_file = _fd_or_path_or_tempfile(file, "rb", tempfile=False)
@@ -686,7 +686,7 @@ class AudioSegment(object):
         parameters=None,
         start_second=None,
         duration=None,
-        **kwargs
+        **kwargs,
     ):
         orig_file = file
         try:
@@ -1513,6 +1513,5 @@ class AudioSegment(object):
         fh = self.export()
         data = base64.b64encode(fh.read()).decode("ascii")
         return src.format(base64=data)
-
 
 from . import effects
