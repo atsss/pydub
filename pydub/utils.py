@@ -19,21 +19,9 @@ except ImportError:
 if sys.version_info >= (3, 0):
     basestring = str
 
-FRAME_WIDTHS = {
-    8: 1,
-    16: 2,
-    32: 4,
-}
-ARRAY_TYPES = {
-    8: "b",
-    16: "h",
-    32: "i",
-}
-ARRAY_RANGES = {
-    8: (-0x80, 0x7F),
-    16: (-0x8000, 0x7FFF),
-    32: (-0x80000000, 0x7FFFFFFF),
-}
+FRAME_WIDTHS = {8: 1, 16: 2, 32: 4}
+ARRAY_TYPES = {8: "b", 16: "h", 32: "i"}
+ARRAY_RANGES = {8: (-0x80, 0x7F), 16: (-0x8000, 0x7FFF), 32: (-0x80000000, 0x7FFFFFFF)}
 
 
 def get_frame_width(bit_depth):
@@ -264,12 +252,7 @@ def get_extra_info(stderr):
 def mediainfo_json(filepath, read_ahead_limit=-1):
     """Return json dictionary with media info(codec, duration, size, bitrate...) from filepath"""
     prober = get_prober_name()
-    command_args = [
-        "-v",
-        "info",
-        "-show_format",
-        "-show_streams",
-    ]
+    command_args = ["-v", "info", "-show_format", "-show_streams"]
     try:
         command_args += [fsdecode(filepath)]
         stdin_parameter = None

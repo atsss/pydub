@@ -78,10 +78,7 @@ def classproperty(func):
     return ClassPropertyDescriptor(func)
 
 
-AUDIO_FILE_EXT_ALIASES = {
-    "m4a": "mp4",
-    "wave": "wav",
-}
+AUDIO_FILE_EXT_ALIASES = {"m4a": "mp4", "wave": "wav"}
 
 WavSubChunk = namedtuple("WavSubChunk", ["id", "position", "size"])
 WavData = namedtuple(
@@ -518,10 +515,7 @@ class AudioSegment(object):
             data[i::channels] = seg.get_array_of_samples()
 
         return cls(
-            data,
-            channels=channels,
-            sample_width=sample_width,
-            frame_rate=frame_rate,
+            data, channels=channels, sample_width=sample_width, frame_rate=frame_rate
         )
 
     @classmethod
@@ -533,7 +527,7 @@ class AudioSegment(object):
         parameters=None,
         start_second=None,
         duration=None,
-        **kwargs,
+        **kwargs
     ):
         orig_file = file
         file, close_file = _fd_or_path_or_tempfile(file, "rb", tempfile=False)
@@ -692,7 +686,7 @@ class AudioSegment(object):
         parameters=None,
         start_second=None,
         duration=None,
-        **kwargs,
+        **kwargs
     ):
         orig_file = file
         try:

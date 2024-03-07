@@ -23,18 +23,8 @@ from pydub.exceptions import (
     CouldntDecodeError,
     MissingAudioParameter,
 )
-from pydub.silence import (
-    detect_silence,
-    split_on_silence,
-)
-from pydub.generators import (
-    Sine,
-    Square,
-    Pulse,
-    Triangle,
-    Sawtooth,
-    WhiteNoise,
-)
+from pydub.silence import detect_silence, split_on_silence
+from pydub.generators import Sine, Square, Pulse, Triangle, Sawtooth, WhiteNoise
 
 data_dir = os.path.join(os.path.dirname(__file__), "data")
 
