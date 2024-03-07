@@ -1520,4 +1520,4 @@ class AudioSegment(object):
         data = base64.b64encode(fh.read()).decode("ascii")
         return src.format(base64=data)
 
-
+from . import effects

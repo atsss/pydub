@@ -1,0 +1,3 @@
+[tool.ruff.lint.per-file-ignores]
+"pydub/__init__.py" = ["F401"]
+"pydub/audio_segment.py" = ["F401", "E402"]
